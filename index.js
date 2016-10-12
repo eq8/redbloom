@@ -26,9 +26,16 @@ function redbloom(initialState, options) {
 	var observable = Rx.Observable
 		.fromEvent(instance, 'dispatch')
 		.concatMap(action => {
+			var listActions = () => {
+				var listActions = bloomrun.list(action);
+				if (listActions.length == 0) {
+					listActions.push(bloomrun.lookup(action))
+				}
+				return listActions;
+			}
 			return Rx.Observable
-				.from(bloomrun.list(action))
-				.map(reducer => reducer.bind(observable, action));
+				.from(listActions())
+				.map(reducer =>	reducer.bind(observable, action));
 		})
 		.scan((currentState, reducer) => reducer(currentState), state);
 
