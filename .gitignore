@@ -1,0 +1,12 @@
+*.swp
+*.swo
+
+.DS_Store
+.jshintignore
+.jshintrc
+
+npm-debug.log
+
+analysis
+coverage
+node_modules

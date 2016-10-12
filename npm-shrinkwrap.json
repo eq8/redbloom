@@ -1,0 +1,49 @@
+{
+  "name": "redbloom",
+  "npm-shrinkwrap-version": "200.5.1",
+  "node-version": "v4.5.0",
+  "dependencies": {
+    "bloomrun": {
+      "version": "2.3.0",
+      "resolved": "https://registry.npmjs.org/bloomrun/-/bloomrun-2.3.0.tgz",
+      "dependencies": {
+        "bloomfilter": {
+          "version": "0.0.16",
+          "resolved": "https://registry.npmjs.org/bloomfilter/-/bloomfilter-0.0.16.tgz"
+        }
+      }
+    },
+    "event-emitter": {
+      "version": "0.3.4",
+      "resolved": "https://registry.npmjs.org/event-emitter/-/event-emitter-0.3.4.tgz",
+      "dependencies": {
+        "d": {
+          "version": "0.1.1",
+          "resolved": "https://registry.npmjs.org/d/-/d-0.1.1.tgz"
+        },
+        "es5-ext": {
+          "version": "0.10.12",
+          "resolved": "https://registry.npmjs.org/es5-ext/-/es5-ext-0.10.12.tgz",
+          "dependencies": {
+            "es6-iterator": {
+              "version": "2.0.0",
+              "resolved": "https://registry.npmjs.org/es6-iterator/-/es6-iterator-2.0.0.tgz"
+            },
+            "es6-symbol": {
+              "version": "3.1.0",
+              "resolved": "https://registry.npmjs.org/es6-symbol/-/es6-symbol-3.1.0.tgz"
+            }
+          }
+        }
+      }
+    },
+    "immutable": {
+      "version": "3.8.1",
+      "resolved": "https://registry.npmjs.org/immutable/-/immutable-3.8.1.tgz"
+    },
+    "rx": {
+      "version": "4.1.0",
+      "resolved": "https://registry.npmjs.org/rx/-/rx-4.1.0.tgz"
+    }
+  }
+}
