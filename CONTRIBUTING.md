@@ -72,7 +72,11 @@ git checkout -b <your-branch-name>
 ### Make your changes and commit:
 
 ```
-git commit -m '[Issue #<your-issue-number>] <short description of change>'
+git commit -m '<type>(<scope>): <subject>
+<BLANK LINE>
+<body>
+<BLANK LINE>
+<footer>'
 ```
 
 We have very precise rules over how our git commit messages can be formatted.  This leads to **more
@@ -158,10 +162,12 @@ git push origin <your-feature-branch>
 
 ### PR Hints
 
-Reference the issue number in your commit message e.g.:
+Reference the issue number in the footer part of your commit message e.g.:
 
 ```
-$ git commit -m '[#5] Make sure to follow the PR process for contributions'
+$ git commit -m 'docs(CONTRIBUTING.md): follow the PR process for contributions
+
+Closes #5'
 ```
 
 #### For large changes spanning many commits / PRs
