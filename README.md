@@ -72,7 +72,7 @@ redbloom.dispatch({ns: 'test'});
 
 ### redbloom([initialState], [opts])
 
-Creates a new instance of Bloomrun.
+Creates a new instance of redbloom which is basically an RxJS Observable.
 
 Options are:
 
