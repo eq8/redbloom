@@ -18,11 +18,9 @@ function redbloom(initialState, options) {
 	var instance = ee({});
 
 	var bloomrun = require('bloomrun')(options);
-
 	bloomrun.default((action, currentState) => {
 		return currentState;
 	});
-
 	var observable = Rx.Observable
 		.fromEvent(instance, 'dispatch')
 		.concatMap(action => {
@@ -37,10 +35,12 @@ function redbloom(initialState, options) {
 				.from(listActions())
 				.map(reducer =>	reducer.bind(observable, action));
 		})
-		.scan((currentState, reducer) => reducer(currentState), state);
+		.scan((currentState, reducer) => {
+			return reducer(currentState);
+		}, state);
 
-	observable.handle = (action, reducer) => bloomrun.add(action, reducer);
-	observable.dispatch = action => instance.emit('dispatch', action);
+		observable.handle = (action, reducer) => bloomrun.add(action, reducer);
+		observable.dispatch = action => instance.emit('dispatch', action);
 
-	return observable;
+		return observable;
 }
