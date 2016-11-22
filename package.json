@@ -59,7 +59,7 @@
     "npm": ">=2.15.9 <3.0.0"
   },
   "dependencies": {
-    "bloomrun": "2.3.0",
+    "bloomrun": "3.0.1",
     "event-emitter": "0.3.4",
     "immutable": "3.8.1",
     "rx": "4.1.0"
