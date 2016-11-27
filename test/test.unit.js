@@ -5,7 +5,7 @@ var test = require('tape');
 test('unit: test .handle() and .dispatch()', function(t) {
 	var redbloom = require('../index.js')();
 
-	t.plan(16);
+	t.plan(19);
 
 	redbloom.handle({ns: 'test', cmd: 'w/ payload'}, function(action, state) {
 		t.pass(action.cmd);
@@ -45,4 +45,5 @@ test('unit: test .handle() and .dispatch()', function(t) {
 	redbloom.dispatch({ns: 'test', cmd: 'w/ payload', payload: 'payload'});
 	redbloom.dispatch({ns: 'test', cmd: 'w/o payload'});
 	redbloom.dispatch({ns: 'test'});
+	redbloom.dispatch({ns: 'cmd'});
 });
