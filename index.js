@@ -21,26 +21,26 @@ function redbloom(initialState, options) {
 	bloomrun.default((action, currentState) => {
 		return currentState;
 	});
+
 	var observable = Rx.Observable
 		.fromEvent(instance, 'dispatch')
 		.concatMap(action => {
-			var listActions = () => {
-				var listActions = bloomrun.list(action);
-				if (listActions.length == 0) {
-					listActions.push(bloomrun.lookup(action))
-				}
-				return listActions;
+			var listActions = bloomrun.list(action);
+
+			if (listActions.length === 0) {
+				listActions.push(bloomrun.lookup(action));
 			}
+
 			return Rx.Observable
-				.from(listActions())
+				.from(listActions)
 				.map(reducer =>	reducer.bind(observable, action));
 		})
 		.scan((currentState, reducer) => {
 			return reducer(currentState);
 		}, state);
 
-		observable.handle = (action, reducer) => bloomrun.add(action, reducer);
-		observable.dispatch = action => instance.emit('dispatch', action);
+	observable.handle = (action, reducer) => bloomrun.add(action, reducer);
+	observable.dispatch = action => instance.emit('dispatch', action);
 
-		return observable;
+	return observable;
 }
