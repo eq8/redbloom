@@ -65,7 +65,7 @@
     "rx": "4.1.0"
   },
   "devDependencies": {
-    "commitizen": "2.9.2",
+    "commitizen": "2.9.6",
     "cz-conventional-changelog": "1.2.0",
     "dependency-check": "2.6.0",
     "doctoc": "1.2.0",
