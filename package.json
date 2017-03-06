@@ -76,7 +76,7 @@
     "istanbul": "0.4.5",
     "npm-check-updates": "2.8.8",
     "npm-shrinkwrap": "200.5.1",
-    "nsp": "2.6.2",
+    "nsp": "2.6.3",
     "plato": "1.7.0",
     "proxyquire": "1.7.10",
     "request": "2.79.0",
