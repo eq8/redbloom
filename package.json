@@ -82,7 +82,7 @@
     "request": "2.81.0",
     "semantic-release": "4.3.5",
     "tape": "4.6.3",
-    "validate-commit-msg": "2.12.1"
+    "validate-commit-msg": "2.14.0"
   },
   "eslintConfig": {
     "extends": "eslint",
