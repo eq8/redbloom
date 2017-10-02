@@ -61,7 +61,7 @@
   "dependencies": {
     "bloomrun": "3.0.3",
     "event-emitter": "0.3.5",
-    "immutable": "3.8.1",
+    "immutable": "4.0.0-rc.4",
     "rx": "4.1.0"
   },
   "devDependencies": {
