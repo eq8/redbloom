@@ -78,7 +78,7 @@
     "npm-shrinkwrap": "200.5.1",
     "nsp": "2.6.3",
     "plato": "1.7.0",
-    "proxyquire": "1.7.11",
+    "proxyquire": "2.1.0",
     "request": "2.81.0",
     "semantic-release": "4.3.5",
     "tape": "4.6.3",
