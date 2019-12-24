@@ -81,7 +81,7 @@
     "proxyquire": "1.7.11",
     "request": "2.81.0",
     "semantic-release": "4.3.5",
-    "tape": "4.6.3",
+    "tape": "4.12.1",
     "validate-commit-msg": "2.12.1"
   },
   "eslintConfig": {
